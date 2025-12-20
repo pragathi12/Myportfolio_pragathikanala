@@ -1,0 +1,62 @@
+═══════════════════════════════════════════════════════════════
+  QUICK SETUP: Receive Emails from Contact Form
+═══════════════════════════════════════════════════════════════
+
+CURRENT STATUS:
+──────────────
+Right now, when someone fills the form, it opens their email 
+client. They need to manually click "Send" in their email app.
+
+TO RECEIVE EMAILS AUTOMATICALLY:
+─────────────────────────────────
+You need to set up EmailJS (free, 200 emails/month).
+
+STEP 1: Install Package
+────────────────────────
+Run this command:
+   npm install
+
+STEP 2: Set Up EmailJS
+───────────────────────
+1. Go to: https://www.emailjs.com
+2. Sign up (free account)
+3. Create a Gmail service (connect your pragathi258@gmail.com)
+4. Create an email template
+5. Get your Service ID, Template ID, and Public Key
+
+STEP 3: Update Contact.jsx
+───────────────────────────
+Open: src/components/Contact.jsx
+
+Find these lines (around line 31-33):
+   const serviceID = 'YOUR_SERVICE_ID'
+   const templateID = 'YOUR_TEMPLATE_ID'
+   const publicKey = 'YOUR_PUBLIC_KEY'
+
+Replace with your actual EmailJS values:
+   const serviceID = 'service_abc123'  // Your actual service ID
+   const templateID = 'template_xyz789'  // Your actual template ID
+   const publicKey = 'abcdefghijklmnop'  // Your actual public key
+
+STEP 4: Test
+────────────
+1. Restart dev server: npm run dev
+2. Fill out the contact form
+3. Submit it
+4. Check your email - you should receive it!
+
+═══════════════════════════════════════════════════════════════
+DETAILED INSTRUCTIONS:
+═══════════════════════════════════════════════════════════════
+See EMAILJS_SETUP.md for complete step-by-step guide with 
+screenshots and template examples.
+
+═══════════════════════════════════════════════════════════════
+FOR NOW (Without EmailJS):
+═══════════════════════════════════════════════════════════════
+The form will open the user's email client with a pre-filled 
+message. They need to click "Send" manually. This works but 
+requires user action.
+
+═══════════════════════════════════════════════════════════════
+

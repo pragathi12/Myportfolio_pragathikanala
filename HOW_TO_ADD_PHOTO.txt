@@ -1,0 +1,58 @@
+═══════════════════════════════════════════════════════════════
+  HOW TO ADD YOUR PHOTO - STEP BY STEP
+═══════════════════════════════════════════════════════════════
+
+The "PK" placeholder is showing because your photo file is not in the 
+public folder yet. Here's how to fix it:
+
+METHOD 1: Using Finder (Easiest)
+─────────────────────────────────
+1. Open Finder
+2. Navigate to: /Users/pragathikanala/Downloads/pragathi_portfolio/public/
+3. Drag and drop your photo file into this folder
+4. Rename it to: photo.jpg (or photo.jpeg, or photo.png)
+5. Refresh your browser (or restart npm run dev)
+
+METHOD 2: Using Terminal
+─────────────────────────
+1. Open Terminal
+2. Run this command (replace with your actual photo path):
+   
+   cp "/path/to/your/photo.jpg" /Users/pragathikanala/Downloads/pragathi_portfolio/public/photo.jpg
+   
+   Example:
+   cp ~/Downloads/my-photo.jpg /Users/pragathikanala/Downloads/pragathi_portfolio/public/photo.jpg
+
+3. Refresh your browser
+
+METHOD 3: Using the Helper Script
+──────────────────────────────────
+1. Open Terminal
+2. Navigate to the project:
+   cd /Users/pragathikanala/Downloads/pragathi_portfolio
+3. Run: ./add-photo.sh
+4. Enter the path to your photo when prompted
+
+═══════════════════════════════════════════════════════════════
+IMPORTANT: After adding the photo
+═══════════════════════════════════════════════════════════════
+
+1. Make sure the file is named: photo.jpg (or photo.jpeg, photo.png)
+2. Make sure it's in the public/ folder
+3. If your dev server is running, restart it:
+   - Press Ctrl+C to stop
+   - Run: npm run dev
+4. Hard refresh your browser: Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows)
+
+═══════════════════════════════════════════════════════════════
+SUPPORTED FILE FORMATS
+═══════════════════════════════════════════════════════════════
+✅ photo.jpg
+✅ photo.jpeg  
+✅ photo.png
+✅ photo.JPG
+✅ photo.JPEG
+✅ photo.PNG
+
+═══════════════════════════════════════════════════════════════
+

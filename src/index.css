@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #0a0e27;
+  --bg-secondary: #1a1f3a;
+  --bg-tertiary: #252b47;
+  --text-primary: #ffffff;
+  --text-secondary: #b4b9d1;
+  --text-accent: #64ffda;
+  --accent-primary: #64ffda;
+  --accent-secondary: #7c4dff;
+  --border-color: #2d3555;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --bg-tertiary: #e8ecf1;
+  --text-primary: #1a1f3a;
+  --text-secondary: #4a5568;
+  --text-accent: #7c4dff;
+  --accent-primary: #7c4dff;
+  --accent-secondary: #64ffda;
+  --border-color: #e2e8f0;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
+

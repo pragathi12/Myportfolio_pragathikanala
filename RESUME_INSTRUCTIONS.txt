@@ -1,0 +1,55 @@
+═══════════════════════════════════════════════════════════════
+  HOW TO ADD YOUR RESUME PDF
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Prepare Your Resume
+─────────────────────────────
+Make sure your resume is saved as a PDF file.
+
+STEP 2: Place It in the Public Folder
+───────────────────────────────────────
+Copy your resume PDF to this location:
+   /Users/pragathikanala/Downloads/pragathi_portfolio/public/resume.pdf
+
+STEP 3: Name It Correctly
+──────────────────────────
+The file MUST be named exactly: resume.pdf
+   ✅ Correct: resume.pdf
+   ❌ Wrong: Resume.pdf, RESUME.pdf, my-resume.pdf
+
+STEP 4: Test It
+───────────────
+1. Refresh your browser (or restart npm run dev)
+2. Click the "Download Resume" button
+3. Your PDF should download!
+
+═══════════════════════════════════════════════════════════════
+QUICK METHODS TO ADD YOUR RESUME
+═══════════════════════════════════════════════════════════════
+
+METHOD 1: Drag & Drop (Easiest)
+────────────────────────────────
+1. Open Finder
+2. Go to: /Users/pragathikanala/Downloads/pragathi_portfolio/public/
+3. Drag your resume PDF there
+4. Rename it to: resume.pdf
+
+METHOD 2: Terminal Command
+───────────────────────────
+Run this command (replace with your actual resume path):
+   cp "/path/to/your/resume.pdf" /Users/pragathikanala/Downloads/pragathi_portfolio/public/resume.pdf
+
+Example:
+   cp ~/Downloads/MyResume.pdf /Users/pragathikanala/Downloads/pragathi_portfolio/public/resume.pdf
+
+═══════════════════════════════════════════════════════════════
+IMPORTANT NOTES
+═══════════════════════════════════════════════════════════════
+
+✅ File must be in: public/ folder
+✅ File must be named: resume.pdf (lowercase)
+✅ After adding, refresh browser or restart dev server
+✅ The download button will work automatically once file is in place
+
+═══════════════════════════════════════════════════════════════
+
