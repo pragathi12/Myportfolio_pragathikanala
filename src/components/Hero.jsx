@@ -34,25 +34,26 @@ const Hero = () => {
           <div className="hero-image-container">
             <div className="hero-image-wrapper">
               <img 
-                src="/photo.jpg" 
+                src={`${import.meta.env.BASE_URL}photo.jpg`}
                 alt="Pragathi Kanala" 
                 className="hero-image"
                 onError={(e) => {
                   const img = e.target
-                  const formats = ['/photo.jpeg', '/photo.png', '/photo.JPG', '/photo.JPEG', '/photo.PNG']
+                  const baseUrl = import.meta.env.BASE_URL
+                  const formats = ['photo.jpeg', 'photo.png', 'photo.JPG', 'photo.JPEG', 'photo.PNG']
                   const currentSrc = img.src.split('/').pop()
                   
                   let currentIndex = -1
                   formats.forEach((format, index) => {
-                    if (format.includes(currentSrc.split('.').pop())) {
+                    if (format.toLowerCase() === currentSrc.toLowerCase()) {
                       currentIndex = index
                     }
                   })
                   
                   if (currentIndex >= 0 && currentIndex < formats.length - 1) {
-                    img.src = formats[currentIndex + 1]
+                    img.src = `${baseUrl}${formats[currentIndex + 1]}`
                   } else if (currentIndex === -1 && formats.length > 0) {
-                    img.src = formats[0]
+                    img.src = `${baseUrl}${formats[0]}`
                   } else {
                     img.style.display = 'none'
                     if (img.nextSibling) {

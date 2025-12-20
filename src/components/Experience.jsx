@@ -6,8 +6,6 @@ const Experience = () => {
     {
       title: 'Software Engineer',
       company: 'Temenos USA Inc.',
-      logo: 'https://logo.clearbit.com/temenos.com',
-      logoFallback: 'T',
       location: 'United States',
       period: 'July 2025 - Present',
       type: 'Full-time',
@@ -25,8 +23,6 @@ const Experience = () => {
     {
       title: 'Software Engineer',
       company: 'Mphasis Limited',
-      logo: 'https://logo.clearbit.com/mphasis.com',
-      logoFallback: 'M',
       location: 'India',
       period: 'September 2021 - July 2023',
       type: 'Full-time',
@@ -50,22 +46,7 @@ const Experience = () => {
       <div className="experience-container">
         {experiences.map((exp, index) => (
           <div key={index} className="experience-item">
-            <div className="experience-logo-container">
-              <div className="experience-logo">
-                <img 
-                  src={exp.logo} 
-                  alt={exp.company}
-                  onError={(e) => {
-                    e.target.style.display = 'none'
-                    e.target.nextSibling.style.display = 'flex'
-                  }}
-                />
-                <div className="experience-logo-fallback" style={{ display: 'none' }}>
-                  {exp.logoFallback}
-                </div>
-              </div>
-              <div className="experience-timeline-dot"></div>
-            </div>
+            <div className="experience-timeline-dot"></div>
             <div className="experience-content">
               <div className="experience-header">
                 <div>

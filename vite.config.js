@@ -2,9 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '/Myportfolio_pragathikanala/',
   plugins: [react()],
   server: {
-    host: true, // Allow external connections
+    host: true,
     port: 5173,
   },
 })
