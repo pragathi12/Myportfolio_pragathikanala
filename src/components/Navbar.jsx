@@ -35,11 +35,22 @@ const Navbar = ({ theme, toggleTheme }) => {
     { id: 'contact', label: 'Contact', icon: <FaEnvelope /> }
   ]
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMobileMenuOpen])
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-wrapper">
-          <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''} ${isScrolled ? 'scrolled-nav' : ''}`}>
+          <div className={`nav-links ${isScrolled ? 'scrolled-nav' : ''}`}>
             {navItems.map((item) => (
               <a 
                 key={item.id}
@@ -69,6 +80,36 @@ const Navbar = ({ theme, toggleTheme }) => {
           </button>
         </div>
       </div>
+
+      {isMobileMenuOpen && (
+        <div className="mobile-menu-overlay" onClick={() => setIsMobileMenuOpen(false)}>
+          <div className="mobile-menu-dropdown" onClick={(e) => e.stopPropagation()}>
+            <div className="mobile-menu-header">
+              <h3>Navigation</h3>
+              <button 
+                className="mobile-menu-close"
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <FaTimes />
+              </button>
+            </div>
+            <div className="mobile-menu-items">
+              {navItems.map((item) => (
+                <a 
+                  key={item.id}
+                  href={`#${item.id}`} 
+                  onClick={() => scrollToSection(item.id)}
+                  className="mobile-menu-item"
+                >
+                  <span className="mobile-menu-icon">{item.icon}</span>
+                  <span className="mobile-menu-text">{item.label}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
