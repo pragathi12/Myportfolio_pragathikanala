@@ -46,10 +46,12 @@ const Experience = () => {
       <div className="experience-container">
         {experiences.map((exp, index) => (
           <div key={index} className="experience-item">
-            <div className="experience-timeline-dot"></div>
+            <div className="experience-icon">
+              <FaBriefcase />
+            </div>
             <div className="experience-content">
               <div className="experience-header">
-                <div>
+                <div className="experience-title-wrapper">
                   <h3 className="experience-title">{exp.title}</h3>
                   <div className="experience-company-name">
                     <FaBuilding /> {exp.company}
