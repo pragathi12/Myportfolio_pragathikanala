@@ -85,7 +85,6 @@ const Navbar = ({ theme, toggleTheme }) => {
         <div className="mobile-menu-overlay" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="mobile-menu-dropdown" onClick={(e) => e.stopPropagation()}>
             <div className="mobile-menu-header">
-              <h3>Navigation</h3>
               <button 
                 className="mobile-menu-close"
                 onClick={() => setIsMobileMenuOpen(false)}

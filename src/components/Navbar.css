@@ -263,17 +263,10 @@
 
   .mobile-menu-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 1.5rem 2rem;
     border-bottom: 1px solid var(--border-color);
-  }
-
-  .mobile-menu-header h3 {
-    margin: 0;
-    color: var(--text-primary);
-    font-size: 1.2rem;
-    font-weight: 600;
   }
 
   .mobile-menu-close {
