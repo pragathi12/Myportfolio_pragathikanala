@@ -7,7 +7,7 @@ const Experience = () => {
       title: 'Software Engineer',
       company: 'Temenos USA Inc.',
       location: 'United States',
-      period: 'July 2025 - Present',
+      period: 'July 2024 - Present',
       type: 'Full-time',
       description: [
         'Build enterprise UI screens for internal banking/customer-service platform using Lit Web Components, JavaScript, and TypeScript',

@@ -8,7 +8,7 @@ const Education = () => {
       school: 'Florida Institute of Technology',
       location: 'Melbourne, Florida, United States',
       gpa: '3.60/4.0',
-      graduation: 'May 2025',
+      graduation: 'May 2024',
       coursework: [
         'Computer Information Security',
         'Database Management',
@@ -16,7 +16,7 @@ const Education = () => {
         'Artificial Intelligence'
       ],
       achievements: [
-        'Outstanding Student of the Year (2025)',
+        'Outstanding Student of the Year (2024)',
         'GPA: 3.60/4.0'
       ]
     },
